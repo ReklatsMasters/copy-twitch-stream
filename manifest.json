@@ -1,0 +1,23 @@
+{
+  "name": "Copy twitch stream",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "__MSG_appDescription__",
+  "default_locale": "en",
+  "content_scripts": [{
+    "matches": ["https://www.twitch.tv/*"],
+    "js": ["js/out.js"],
+    "run_at": "document_end"
+  }],
+  "background": {
+    "scripts": ["js/background.js"]
+  },
+  "permissions": [
+    "pageCapture",
+    "tabs",
+    "https://www.twitch.tv/*",
+    "https://api.twitch.tv/*",
+    "https://twitch.tv/*",
+    "http://*.ttvnw.net/*"
+  ]
+}
